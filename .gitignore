@@ -1,0 +1,28 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environments
+venv/
+env/
+ENV/
+test_env/
+test_venv/
+
+# Distribution & Packaging
+build/
+dist/
+*.egg-info/
+*.tar.gz
+
+# Static Analysis & IDE caches
+.mypy_cache/
+.pytest_cache/
+.vscode/
+
+# Project output files (exclude config.txt so it gets tracked)
+*.txt
+!config.txt
