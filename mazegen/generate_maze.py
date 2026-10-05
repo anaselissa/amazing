@@ -18,13 +18,15 @@ def generate_maze(config_inf: dict) -> tuple[Grid, list[list[Cell]], Any,
         tuple: A tuple containing the Grid object, the 2D grid list,
           start cell, exit cell, vertical path list, and horizontal path list.
     """
+
     obj_grid = Grid(
         int(config_inf["HEIGHT"]),
         int(config_inf["WIDTH"])
     )
     perf: bool = config_inf["PERFECT"]
     grid = obj_grid.create_maze()
-    obj_grid.sseed(config_inf["SEED"])
+    if config_inf["SEED"] != 0:
+        obj_grid.sseed(config_inf["SEED"])
     obj_grid.cell_nebs(grid)
     obj_grid.logo_42(grid)
     obj_grid.road_maker(grid[0][0])

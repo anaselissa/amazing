@@ -47,10 +47,7 @@ class Grid:
         Args:
             seed (int): The seed value. Ignored if <= 0.
         """
-        if seed <= 0:
-            return
-        else:
-            random.seed(seed)
+        random.seed(seed)
 
     def create_maze(self) -> list[list[Cell]]:
         """

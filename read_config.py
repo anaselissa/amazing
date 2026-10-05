@@ -111,10 +111,9 @@ def ret_check(config_file: str) -> dict[str, Any]:
                 try:
                     ret["SEED"] = int(config["SEED"])
                 except Exception:
-                    print("SEED must be an integer")
                     ret["SEED"] = 0
             else:
-                ret["SEED"] = 0
+                ret["SEED"] = "None"
             width_termenal, hight_terminal = tuple(shutil.get_terminal_size())
             if (ret["HEIGHT"] * 2) + 8 > hight_terminal or\
                (ret["WIDTH"] * 4) + 1 > width_termenal:
