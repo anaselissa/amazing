@@ -6,7 +6,7 @@ and display them with togglable paths and color themes.
 """
 
 import sys
-import read_config
+import mazegen.read_config as read_config
 from mazegen.generate_maze import generate_maze, display_maze
 
 show_path: bool = True
